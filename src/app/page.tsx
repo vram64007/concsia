@@ -7,7 +7,7 @@ const USMapPage = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-900">
       <h1 className="text-2xl font-bold mb-4">US Map</h1>
       <USMap onStateClick={handleStateClick} />
     </div>
