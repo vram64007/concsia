@@ -1,16 +1,26 @@
 "use client";
-import USMap from "./us_map";
+
+import Navbar from "../../components/navbar";
+import USMap from "../../components/us_map";
+import { redirect } from "next/navigation";
 
 const USMapPage = () => {
   const handleStateClick = (stateName: string) => {
-    alert(`You clicked on ${stateName}`);
+    redirect("/states/" + stateName);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-900">
-      <h1 className="text-2xl font-bold mb-4">US Map</h1>
-      <USMap onStateClick={handleStateClick} />
-    </div>
+    <>
+      <Navbar />
+      <div className="flex flex-col items-center justify-center h-screen bg-gray-900">
+        <h1 className="text-2xl font-bold mb-4">States</h1>
+        <h5 className="text-base text-gray-200">
+          Click on your state to connect with others and find ways to
+          contribute!
+        </h5>
+        <USMap onStateClick={handleStateClick} />
+      </div>
+    </>
   );
 };
 

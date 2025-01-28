@@ -74,10 +74,8 @@ const USMap: React.FC<USMapProps> = ({ onStateClick }) => {
 
   return (
     <div className="flex flex-col items-center">
-      {/* Logo at the top left */}
-
       {/* SVG Map */}
-      <svg ref={svgRef} className="border border-gray-300" />
+      <svg ref={svgRef} />
 
       {/* Tooltip */}
       {hoveredState && tooltipPosition && (
