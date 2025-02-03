@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { NewspaperIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 
 interface CauseItem {
   text: string;

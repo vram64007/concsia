@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Josefin_Sans } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import MyFooter from "../../components/footer";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${josefinSans.className} antialiased`}>{children}</body>
+      <body className={`${josefinSans.className} antialiased`}>
+        {children}
+        <MyFooter />
+      </body>
     </html>
   );
 }

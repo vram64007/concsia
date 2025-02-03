@@ -1,5 +1,6 @@
 "use client";
 
+import MyFooter from "../../components/footer";
 import Navbar from "../../components/navbar";
 import USMap from "../../components/us_map";
 import { redirect } from "next/navigation";
@@ -20,6 +21,7 @@ const USMapPage = () => {
         </h5>
         <USMap onStateClick={handleStateClick} />
       </div>
+      <MyFooter />
     </>
   );
 };
